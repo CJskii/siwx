@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { SiwTezosMessage } from "@learnweb3dao/siwTezos";
+import { SiwTezosMessage } from "@learnweb3dao/siwtezos";
 import { TezosToolkit } from "@taquito/taquito";
 import { BeaconWallet } from "@taquito/beacon-wallet";
 import { getCsrfToken, signIn } from "next-auth/react";

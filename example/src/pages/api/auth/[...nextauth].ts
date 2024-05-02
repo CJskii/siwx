@@ -1,4 +1,4 @@
-import { SiwTezosMessage } from "@learnweb3dao/siwTezos";
+import { SiwTezosMessage } from "@learnweb3dao/siwtezos";
 import { SiweMessage } from "@learnweb3dao/siwe";
 import { SiwsMessage } from "@learnweb3dao/siws";
 import { SiwStacksMessage } from "@learnweb3dao/siwstacks";
