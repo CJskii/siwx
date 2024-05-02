@@ -1,0 +1,33 @@
+{
+  "name": "@learnweb3dao/siwfuel",
+  "version": "0.3.0",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LearnWeb3DAO/siwx"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@learnweb3dao/siwx-common": "^0.3.0",
+    "ethers": "5",
+    "fuels": "^0.83.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.1",
+    "jest": "^29.5.0",
+    "ts-jest": "^29.1.0",
+    "ts-node": "^10.9.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "gitHead": "119495621d840ebb44d9fd0ef6ca3c72539b8041"
+}
