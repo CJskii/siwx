@@ -5,6 +5,7 @@ import { SIWTezos } from "@/components/siwTezos";
 import { SIWE } from "@/components/siwe";
 import { SIWS } from "@/components/siws";
 import { SIWStacks } from "@/components/siwstacks";
+import { SIWFUEL } from "@/components/siwFuel";
 import { signOut, useSession } from "next-auth/react";
 
 export default function Home() {
@@ -41,6 +42,7 @@ export default function Home() {
       <SIWStacks />
       <SIWTezos />
       <SIWStarknet />
+      <SIWFUEL />
     </main>
   );
 }
