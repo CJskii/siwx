@@ -1,31 +1,56 @@
 # Sign in with X
 
-Sign in with X describes how blockchain accounts can authenticate with off-chain services using a standardized message format.
+"Sign in with X" enables blockchain accounts to authenticate with off-chain services using a standardized message format, streamlining the verification of blockchain identities across various platforms.
 
 ## Supported Networks
 
-SIWx currently supports three blockchain networks:
+`SIWx` currently supports the following blockchain networks:
 
-1. Ethereum (and by extension, all EIP-155 chains)
-2. Solana
-3. Stacks
-4. Tezos
-5. Starknet
+- Ethereum (including all EIP-155 chains)
+- Solana
+- Stacks
+- Tezos
+- Starknet
+- Fuel
 
-It is on the roadmap to expand support for the following blockchain networks:
+### Upcoming Network Support
 
-1. Flow
+We are planning to expand our support to the Flow network next.
 
-If you have suggestions for any more, please create a specification for [CAIP-122 can be found here](https://github.com/ChainAgnostic/CAIPs/blob/master/CAIPs/caip-122.md) over at [ChainAgnostic/namespaces](https://github.com/ChainAgnostic/namespaces) first and then create a pull request.
+If you have suggestions for additional networks, please contribute a specification to [ChainAgnostic/namespaces](https://github.com/ChainAgnostic/namespaces) following the [CAIP-122 standard](https://github.com/ChainAgnostic/CAIPs/blob/master/CAIPs/caip-122.md).
 
-## Example
+## Getting Started
 
-See the `example` folder for a Next.js + NextAuth end to end example.
+Follow these steps to set up `SIWx`:
 
-## Specification
+1.  Clone the repository:
+    ```bash
+    git clone <repository-url>
+    ```
+2.  Set Up the Environment:
+    Navigate to the cloned directory, install dependencies, and build the project:
+    ```bash
+    cd <repository-name>
+    pnpm install
+    pnpm build
+3.  Running Examples To see SIWx in action, proceed with the following commands in the examples directory:
 
-The specification for Sign in with X [CAIP-122 can be found here](https://github.com/ChainAgnostic/CAIPs/blob/master/CAIPs/caip-122.md).
+        ```bash
+        cd examples
+        pnpm install
+        pnpm run dev
+
+    This setup initiates a development server where you can explore various implementation examples through your web browser.
+
+## Example Implementation
+
+Check out the example folder for a fully functional Next.js and NextAuth.js application demonstrating the end-to-end capabilities of SIWx.
+
+Specifications
+For a comprehensive understanding of the "Sign in with X" protocol, refer to the [CAIP-122](https://github.com/ChainAgnostic/CAIPs/blob/master/CAIPs/caip-122.md) standard documentation.
 
 ## License
 
-The library is licensed under the Apache 2.0 license.
+This project is open-sourced under the Apache 2.0 License, allowing for widespread use and modification to meet a variety of needs.
+
+This README is organized to provide a concise yet comprehensive overview of the project, installation instructions, and additional resources for users and contributors.
