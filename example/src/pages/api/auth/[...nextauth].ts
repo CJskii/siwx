@@ -9,6 +9,7 @@ import { JWT } from "next-auth/jwt";
 import NextAuth from "next-auth/next";
 import CredentialsProvider from "next-auth/providers/credentials";
 import { getCsrfToken } from "next-auth/react";
+import { FuelMessage } from "@learnweb3dao/siwfuel";
 
 export default async function auth(req: NextApiRequest, res: NextApiResponse) {
   return NextAuth(req, res, getAuthOptions(req));
@@ -223,6 +224,47 @@ export const getAuthOptions = (req: NextApiRequest) => {
 
           return {
             id: siwStarknet.address,
+          };
+        } catch (error) {
+          console.error(error);
+          return null;
+        }
+      },
+    }),
+    CredentialsProvider({
+      id: "fuel",
+      name: "Fuel",
+      credentials: {
+        message: {
+          label: "Message",
+          type: "text",
+          placeholder: "0x0",
+        },
+        signature: {
+          label: "Signature",
+          type: "text",
+          placeholder: "0x0",
+        },
+      },
+
+      async authorize(credentials) {
+        try {
+          const fuel = new FuelMessage(
+            JSON.parse(credentials?.message || "{}")
+          );
+          const nextAuthUrl = new URL(process.env.NEXTAUTH_URL as string);
+          const result = await fuel.verify({
+            signature: credentials?.signature || "",
+            domain: nextAuthUrl.host,
+            nonce: await getCsrfToken({ req }),
+          });
+
+          console.log({ result });
+
+          if (!result.success) return null;
+
+          return {
+            id: fuel.address,
           };
         } catch (error) {
           console.error(error);
