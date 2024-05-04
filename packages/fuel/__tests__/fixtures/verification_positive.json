@@ -1,38 +1,38 @@
 {
   "example message": {
     "domain": "login.xyz",
-    "address": "0x9D85ca56217D2bb651b00f15e694EB7E713637D4",
+    "address": "fuel1j0k43mq3g2l6spur9y0tesps6s0sdhnfq8xv2ng5ga9td250u9hqs5a983",
     "statement": "Sign-In With Fuel Example Statement",
     "uri": "https://login.xyz",
     "version": "1",
     "nonce": "bTyXgcQxn2htgkjJn",
     "issuedAt": "2022-01-27T17:09:38.578Z",
-    "chainId": 1,
+    "chainId": "fuel_testnet_beta",
     "expirationTime": "2100-01-07T14:31:43.952Z",
-    "signature": "0xdc35c7f8ba2720df052e0092556456127f00f7707eaa8e3bbff7e56774e7f2e05a093cfc9e02964c33d86e8e066e221b7d153d27e5a2e97ccd5ca7d3f2ce06cb1b"
+    "signature": "0x8c4abf8ae5b3d5de1ba95168e3f09300fc72980ba53983234a89647e68fa65dbc2094cf7014d3028a5c33745acd928f350d3fa1ad3eea21f4c4e6a72200f1290"
   },
   "not yet valid": {
     "domain": "login.xyz",
-    "address": "0xE6D3Aa1F561A215E5eb1f02Ba8705385F03fCaFB",
+    "address": "fuel1j0k43mq3g2l6spur9y0tesps6s0sdhnfq8xv2ng5ga9td250u9hqs5a983",
     "statement": "Sign-In With Fuel Example Statement",
     "uri": "https://login.xyz",
     "version": "1",
     "nonce": "lx2nx4so",
     "issuedAt": "2022-01-05T14:27:30.883Z",
-    "chainId": 1,
+    "chainId": "fuel_testnet_beta",
     "notBefore": "2100-01-07T14:31:43.952Z",
-    "signature": "0xc2539ace78f13c7eb8c0852d38d269a6f97bebd9f7872097d2e3137b541f8bf50176062a46eeea83086bd2721423fb5755a932ff6ccc046ed482d14e4576042f1c",
+    "signature": "0x1a02a31153c2c43c68d85474357ea1c292a52768492bba66e5dcf5b5a0c6066ba7e60a952525d1c8c62633c0416222c80582885ea709c2a4af25f8f143e71515",
     "time": "2101-01-07T14:31:43.952Z"
   },
   "recovery byte starting at 0": {
     "domain": "www.tally.xyz",
-    "address": "0xc95EB884FE852e241D409234bfC7045CB9E31BD7",
-    "statement": "Sign in with Fuel to Tally",
+    "address": "fuel1j0k43mq3g2l6spur9y0tesps6s0sdhnfq8xv2ng5ga9td250u9hqs5a983",
+    "statement": "Sign-In With Fuel",
     "uri": "https://tally.xyz",
     "version": "1",
-    "chainId": 1,
+    "chainId": "fuel_testnet_beta",
     "nonce": "15050747",
     "issuedAt": "2022-06-30T14:08:51.382Z",
-    "signature": "0x8c46b6eb8505939892d8e9b075f89f8277321b17b993151f37810cdda38cce6f4a85909d2b53e6a14629c74c0ac38bf4becde78ee5b2529812bf6cceaf7b2a2501"
+    "signature": "0x490e1da9cd2fddbe49b95859fb98624bbb5ecdfbc7e99f3d71d0d15d560bda8c725e5c62c51bc720cfc5d758da03ab55f20759a8cb98333e02970c3b90509b91"
   }
 }

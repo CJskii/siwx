@@ -1,6 +1,6 @@
 import { SiwxErrorTypes } from "@learnweb3dao/siwx-common";
 import { FuelMessage } from "../src";
-import { Wallet } from "ethers";
+import { Wallet, Provider, Signer, hashMessage } from "fuels";
 
 const parsePositiveObjects = require("./fixtures/parse_positive.json");
 const parseNegativeObjects = require("./fixtures/parse_negative.json");
@@ -31,26 +31,31 @@ describe("Sign in with Fuel", () => {
     "Verifies message successfully: %s",
     async (_, test: any) => {
       const msg = new FuelMessage(test);
+
       const result = await msg.verify({
         signature: test.signature,
         time: test.time || test.issuedAt,
       });
+
       expect(result.error).toBe(undefined);
       expect(result.success).toBe(true);
     }
   );
 
-  test.concurrent.each(Object.entries(verificationPositiveObjects))(
+  test.concurrent.each(Object.entries(parsePositiveObjects))(
     "Verifies message successfully with random wallet: %s",
     async (_, test: any) => {
-      const randomWallet = Wallet.createRandom();
-      const msg = new FuelMessage(test);
-      msg.address = randomWallet.address;
+      const msg = new FuelMessage(test.fields);
+
+      const randomWallet = Wallet.generate();
+      msg.address = randomWallet.address.toString();
+
       const signature = await randomWallet.signMessage(msg.toMessage());
       const result = await msg.verify({
         signature,
         time: test.time || test.issuedAt,
       });
+
       expect(result.error).toBe(undefined);
       expect(result.success).toBe(true);
     }
