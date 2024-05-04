@@ -1,6 +1,6 @@
 import { SiwxErrorTypes } from "@learnweb3dao/siwx-common";
 import { FuelMessage } from "../src";
-import { Wallet, Provider, Signer, hashMessage } from "fuels";
+import { Wallet } from "fuels";
 
 const parsePositiveObjects = require("./fixtures/parse_positive.json");
 const parseNegativeObjects = require("./fixtures/parse_negative.json");
